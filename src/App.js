@@ -11,7 +11,7 @@ import Funds from "./pages/Funds";
 
 import "./scripts/DarkmodeScript";
 import "./styles/NavbarStyle.css";
-
+import "./styles/Dashboard.css";
 
 function App() {
   return (

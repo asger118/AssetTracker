@@ -1,4 +1,4 @@
-let ws = new WebSocket("wss://stream.binance.com:9443/ws/etheur@trade");
+/* let ws = new WebSocket("wss://stream.binance.com:9443/ws/etheur@trade");
 let sotckPriceElement = document.getElementById("APPLE-price");
 let lastPrice = null;
 ws.onmessage = (event) => {
@@ -13,3 +13,5 @@ ws.onmessage = (event) => {
       : "red";
   lastPrice = price;
 };
+ */
+

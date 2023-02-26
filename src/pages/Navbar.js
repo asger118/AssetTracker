@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav class="navbar">
         <ul class="navbar-nav">
           <div class="header">
-            <svg width="800px" height="800px" viewBox="0 0 64 64" class="avatar" xmlns="http://www.w3.org/2000/svg">
+            <svg width="800px" height="800px" viewBox="0 0 64 64" class="avatar">
 
               <defs>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
 
               </defs>
 
-              <g data-name="Winter Avatar" id="Winter_Avatar-47">
+              <g data-name="Winter Avatar">
 
                 <path class="cls-1" d="M15.09,27V24.91a16.91,16.91,0,1,1,33.82,0V27l-15.8,6.29Z" id="path51134-3-2-5" />
 
@@ -107,7 +107,7 @@ const Navbar = () => {
           </li>
           <li class="nav-item">
             <NavLink to="/" className={({ isActive }) => { return isActive ? "nav-link-active" : "nav-link" }}>
-              <svg width="234" height="224" viewBox="0 0 234 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="234" height="224" viewBox="0 0 234 224" fill="none">
                 <rect id="Rectangle 1" width="100" height="100" rx="30" fill="currentColor" class="fa-primary" />
                 <rect id="Rectangle 2" x="134" width="100" height="100" rx="30" fill="currentColor" class="fa-primary" />
                 <rect id="Rectangle 3" x="134" y="124" width="100" height="100" rx="30" fill="currentColor"
@@ -119,7 +119,7 @@ const Navbar = () => {
           </li>
           <li class="nav-item">
             <NavLink to="MyAssets" className={({ isActive }) => { return isActive ? "nav-link-active" : "nav-link" }}>
-              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none">
                 <path class="fa-primary" d="M13 9H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                   stroke-linejoin="round" />
                 <path class="fa-primary"
@@ -134,7 +134,7 @@ const Navbar = () => {
           </li>
           <li class="nav-item">
             <NavLink to="Market" className={({ isActive }) => { return isActive ? "nav-link-active" : "nav-link" }}>
-              <svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+              <svg width="800" height="800" viewBox="0 0 800 800">
                 <path class="fa-primary"
                   d="M100 80C88.9543 80 80 88.9543 80 100V699.75C80 710.796 88.9543 719.75 100 719.75H699.75C710.796 719.75 719.75 710.796 719.75 699.75V100C719.75 88.9543 710.796 80 699.75 80H100ZM673.101 106.649C684.146 106.65 693.1 115.604 693.1 126.649V215.246C693.1 219.318 691.857 223.293 689.537 226.64L529.656 457.276C523.083 466.758 509.871 468.727 500.819 461.573L413.623 392.667C404.657 385.583 391.589 387.436 384.947 396.735L274.506 551.366C268.232 560.15 256.118 562.371 247.137 556.383L198.94 524.252C190.526 518.643 179.25 520.196 172.666 527.871L106.675 604.8V126.626C106.675 115.58 115.63 106.625 126.676 106.626L673.101 106.649ZM126.65 693.1C115.604 693.1 106.65 684.146 106.65 673.1V645.775L177.515 563.171C184.099 555.496 195.376 553.943 203.79 559.553L253.812 592.906C262.794 598.895 274.907 596.675 281.182 587.891L390.373 435.032C397.014 425.735 410.081 423.881 419.047 430.965L506.543 500.099C515.596 507.252 528.807 505.283 535.38 495.801L693.075 268.3V673.1C693.075 684.146 684.121 693.1 673.075 693.1H126.65Z"
                   fill="currentColor" stroke="currentColor" stroke-width="32" />
@@ -152,7 +152,7 @@ const Navbar = () => {
           </li>
           <li class="nav-item">
             <NavLink to="AcoountSettings" className={({ isActive }) => { return isActive ? "nav-link-active" : "nav-link" }}>
-              <svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+              <svg width="800" height="800" viewBox="0 0 800 800">
                 <path class="fa-primary"
                   d="M400 400C473.638 400 533.333 340.305 533.333 266.667C533.333 193.029 473.638 133.333 400 133.333C326.362 133.333 266.667 193.029 266.667 266.667C266.667 340.305 326.362 400 400 400Z"
                   fill="currentColor" />
@@ -165,7 +165,7 @@ const Navbar = () => {
           </li>
           <li class="nav-item">
             <NavLink to="Settings" className={({ isActive }) => { return isActive ? "nav-link-active" : "nav-link" }}>
-              <svg width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg width="800px" height="800px" viewBox="0 0 20 20">
                 <path
                   d="M10 13a3 3 0 110-6 3 3 0 010 6zm7.476-1.246c-1.394-.754-1.394-2.754 0-3.508a1 1 0 00.376-1.404l-1.067-1.733a1 1 0 00-1.327-.355l-.447.243c-1.329.719-2.945-.244-2.945-1.755V3a1 1 0 00-1-1H8.934a1 1 0 00-1 1v.242c0 1.511-1.616 2.474-2.945 1.755l-.447-.243a1 1 0 00-1.327.355L2.148 6.842a1 1 0 00.376 1.404c1.394.754 1.394 2.754 0 3.508a1 1 0 00-.376 1.404l1.067 1.733a1 1 0 001.327.355l.447-.243c1.329-.719 2.945.244 2.945 1.755V17a1 1 0 001 1h2.132a1 1 0 001-1v-.242c0-1.511 1.616-2.474 2.945-1.755l.447.243a1 1 0 001.327-.355l1.067-1.733a1 1 0 00-.376-1.404z"
                   fill="currentColor" class="fa-primary" />
@@ -176,13 +176,12 @@ const Navbar = () => {
           <li class="nav-item nav-item-toggle">
             <input type="checkbox" id="darkmode-toggle" class="darkmode-toggle-input" />
             <label for="darkmode-toggle" class="darkmode-toggle-label">
-              <svg class="moon" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="moon" width="800px" height="800px" viewBox="0 0 24 24">
                 <path fill="none"
                   d="M2.02911 12.42C2.38911 17.57 6.75911 21.76 11.9891 21.99C15.6791 22.15 18.9791 20.43 20.9591 17.72C21.7791 16.61 21.3391 15.87 19.9691 16.12C19.2991 16.24 18.6091 16.29 17.8891 16.26C12.9991 16.06 8.99911 11.97 8.97911 7.13996C8.96911 5.83996 9.23911 4.60996 9.72911 3.48996C10.2691 2.24996 9.61911 1.65996 8.36911 2.18996C4.40911 3.85996 1.69911 7.84996 2.02911 12.42Z"
                   stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <svg class="sun" stroke="currenColor" width="800px" height="800px" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg class="sun" stroke="currenColor" width="800px" height="800px" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="3" stroke="#currenColor" stroke-width="2" fill="none" />
                 <path d="M12 5V3" stroke="currenColor" stroke-width="2" stroke-linecap="round" />
                 <path d="M12 21V19" stroke="currenColor" stroke-width="2" stroke-linecap="round" />

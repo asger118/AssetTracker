@@ -1,0 +1,41 @@
+.watchlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.stock-item {
+    display: flex;
+    align-items: center;
+    width: 9rem;
+    height: 4rem;
+    border-radius: 1rem;
+    background-color: var(--bg-secondary);
+    margin: 0 0 1rem 1rem;
+}
+
+.stock-item svg {
+    height: 3rem;
+    width: 3rem;
+    fill: var(---text-primary);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.stock-item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.stock-item-text h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    position: relative;
+    top: 1rem;
+}
+
+.stock-item-text p {
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 0.8rem;
+}
