@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Dashboard from "./pages/Dashboard";
+import Market from "./pages/Market";
+import MyAssets from "./pages/myAssets";
+import Navbar from "./pages/Navbar";
+import Settings from "./pages/Settings";
+import Stock from "./pages/Stock";
+import Crypto from "./pages/Crypto";
+import Funds from "./pages/Funds";
+
+import "./scripts/DarkmodeScript";
+import "./styles/NavbarStyle.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="Market" element={<Market />}>
+        <Route path="Stock" element={<Stock />} />
+        <Route path="Funds" element={<Funds />} />
+        <Route path="Cryto" element={<Crypto />} />
+        <Route /></Route>
+        <Route path="MyAssets" element={<MyAssets />} />
+        <Route path="Settings" element={<Settings />} />
+      </Routes>
+    </Router>
   );
-}
-
+};
 export default App;
