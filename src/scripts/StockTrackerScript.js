@@ -14,4 +14,3 @@ ws.onmessage = (event) => {
   lastPrice = price;
 };
  */
-

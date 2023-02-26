@@ -9,7 +9,7 @@ import Stock from "./pages/Stock";
 import Crypto from "./pages/Crypto";
 import Funds from "./pages/Funds";
 
-import "./scripts/DarkmodeScript";
+import "./scripts/DarkmodeScript.js";
 import "./styles/NavbarStyle.css";
 import "./styles/Dashboard.css";
 
