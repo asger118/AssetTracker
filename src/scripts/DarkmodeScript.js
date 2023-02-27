@@ -23,7 +23,7 @@ const disableDarkMode = () => {
 if (darkMode === "enabled") {
   enableDarkMode();
 }
-
+if(darkModeToggle){
 // When someone clicks the button
 darkModeToggle.addEventListener("click", () => {
   // get their darkMode setting
@@ -37,3 +37,5 @@ darkModeToggle.addEventListener("click", () => {
     disableDarkMode();
   }
 });
+
+}
