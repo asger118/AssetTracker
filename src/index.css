@@ -36,3 +36,11 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #384cff;
 }
+
+.up {
+  color: green;
+}
+
+.down {
+  color: red;
+}

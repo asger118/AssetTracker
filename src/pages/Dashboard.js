@@ -103,6 +103,8 @@ const Dashboard = () => {
           </div>
         </div>
       </section>
+
+
       {stonks.map((stonk) => (
         <div className="stonk" key={stonk.id}>
           <h2 className={stonk.direction}>
