@@ -18,7 +18,7 @@ const Stock = () => {
       } catch (err) { console.log(err) };
     };
     getStockList();
-  }, []);
+  }, [stockCollectionRef]);
 
 
 
