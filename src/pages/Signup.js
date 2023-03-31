@@ -15,7 +15,7 @@ export default function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const { Signup} = useAuth()
+    const { signup } = useAuth()
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
@@ -27,8 +27,9 @@ export default function Signup() {
             setLoading(true)
             await signInWithPopup(auth, googleProvider);
             navigate("/");
-        } catch {
+        } catch (err){
             setError("Failed to sign up")
+            console.log(error)
         }
     };
   
@@ -38,34 +39,35 @@ export default function Signup() {
       try {
         setError("")
         setLoading(true)
-        await Signup(emailRef.current.value, passwordRef.current.value)
+        await signup(emailRef.current.value, passwordRef.current.value)
         navigate("/")
-      } catch {
+      } catch (err){
         setError("Failed to sign up")
+        console.log(err)
       }
   
       setLoading(false)
     }
   return (
             <div className="wrapper">
-                <header>Sign Up</header>
+                <header>Sign Up </header>
                 {error && <div variant="danger" className="errorAlert">{error}</div>}
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} autoComplete="off">
                     <div className="field email">
                         <div className="input-area">
-                            <input placeholder="Email Address" type="email" ref={emailRef} required />
+                            <input autoComplete="email" placeholder="Email Address" type="email" ref={emailRef} required />
                             <i className="icon fas fa-envelope"><EmailImage /></i>
                         </div>
                     </div>
                     <div className="field password">
                         <div className="input-area">
-                            <input placeholder="Password" type="password" ref={passwordRef} required />
+                            <input autoComplete="new-password" placeholder="Password" type="password" ref={passwordRef} required />
                             <i className="icon fas fa-lock"><LockImage /></i>
                         </div>
                     </div>
                     <div className="field password">
                         <div className="input-area">
-                            <input placeholder="Confirm Password" type="password" ref={passwordConfirmRef} required />
+                            <input autoComplete="new-password" placeholder="Confirm Password" type="password" ref={passwordConfirmRef} required />
                             <i className="icon fas fa-lock"><LockImage /></i>
                         </div>
                     </div>

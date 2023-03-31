@@ -25,9 +25,10 @@ export default function Navbar() {
     setError("")
     try {
       await logout()
-      navigate("/login")
-    } catch {
+      navigate("login")
+    } catch (err){
       setError("Failed to log out")
+      console.log(err)
     }
   }
 
@@ -41,7 +42,7 @@ export default function Navbar() {
             <div className="header">
             {!currentUser.photoURL ? <AvatarImage /> : <avatar  alt="Google Photo/Initial" src="{currentUser.photoURL}"></avatar>}
             <div className="header-info">
-              <h3>{currentUser?.displayName}</h3> 
+              <h3>{currentUser?.email}</h3> 
               <p>10.000.000kr</p>
             </div>
           </div>

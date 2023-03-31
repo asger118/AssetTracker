@@ -1,51 +1,47 @@
 import React, { useRef, useState } from "react"
 import { useAuth } from "../Contexts/AuthContext"
-import { Link, useNavigate } from "react-router-dom"
-import { auth, googleProvider } from "../config/firebase";
-import { signInWithPopup } from "firebase/auth";
+import { Link, useNavigate} from "react-router-dom"
 
-import "../styles/LoginStyle.css"
-import { ReactComponent as EmailImage } from "../images/email.svg"
-import { ReactComponent as LockImage } from "../images/lock.svg"
-import { ReactComponent as GoogleImage } from "../images/google.svg"
-
-
-export default function Login() {
+export default function UpdateProfile() {
   const emailRef = useRef()
   const passwordRef = useRef()
-  const { login } = useAuth()
+  const passwordConfirmRef = useRef()
+  const { currentUser, updatePassword, updateEmail } = useAuth()
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
-  const signInWithGoogle = async () => {
-    try {
-        await signInWithPopup(auth, googleProvider);
-        navigate("/");
-    } catch (err) {
-        console.error(err);
-    }
-};
-
-
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault()
-
-    try {
-      setError("")
-      setLoading(true)
-      await login(emailRef.current.value, passwordRef.current.value)
-      navigate("/")
-    } catch (err){
-      setError("Failed to log in")
-      console.log(err)
+    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError("Passwords do not match")
     }
 
-    setLoading(false)
+    const promises = []
+    setLoading(true)
+    setError("")
+
+    if (emailRef.current.value !== currentUser.email) {
+      promises.push(updateEmail(emailRef.current.value))
+    }
+    if (passwordRef.current.value) {
+      promises.push(updatePassword(passwordRef.current.value))
+    }
+
+    Promise.all(promises)
+      .then(() => {
+        navigate("/")
+      })
+      .catch(() => {
+        setError("Failed to update account")
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }
 
   return (
-            <div className="wrapper">
+    <div className="wrapper">
                 <header>Log In</header>
                 {error && <div variant="danger" className="errorAlert">{error}</div>}
                 <form onSubmit={handleSubmit}>

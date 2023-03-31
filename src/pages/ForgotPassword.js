@@ -19,8 +19,9 @@ export default function ForgotPassword() {
       setLoading(true)
       await resetPassword(emailRef.current.value)
       setMessage("Check your inbox for further instructions")
-    } catch {
+    } catch (err){
       setError("Failed to reset password")
+      console.log(err)
     }
 
     setLoading(false)
@@ -29,8 +30,8 @@ export default function ForgotPassword() {
   return (
     <div className="wrapper">
                 <header>Reset Password</header>
-                {error && <alert variant="danger" className="errorAlert">{error}</alert>}
-                {message && <alert variant="success">{message}</alert>}
+                {error && <div variant="danger">{error}</div>}
+                {message && <div variant="success">{message}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className="field email">
                         <div className="input-area">
