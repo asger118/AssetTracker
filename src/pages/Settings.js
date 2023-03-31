@@ -1,8 +1,7 @@
-const Settings = () => {
+export default function Settings() {
     return (
-      <main>
+      <div className="page">
         <h4>Settings</h4>
-      </main>
+      </div>
     );
-  };
-  export default Settings;
+  }

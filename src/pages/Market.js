@@ -1,14 +1,13 @@
 import { Outlet } from "react-router-dom";
 
 
-const Market = () => {
+export default function Market() {
     return (
-      <><main>
+      <div className="page">
         <h4>Market</h4>
 
         <Outlet />
-      </main>
-      </>
+      </div>
+      
     );
-  };
-  export default Market;
+  }

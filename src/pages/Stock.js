@@ -3,7 +3,11 @@ import { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore"
 import "../styles/StockTable.css"
 
-const Stock = () => {
+
+export let Tickers = [];
+
+
+export default function Stock() {
 
   const [stockList, setStockList] = useState([]);
   const stockCollectionRef = collection(db, "Stock");
@@ -17,10 +21,18 @@ const Stock = () => {
         setStockList(filteredData);
       } catch (err) { console.log(err) };
     };
-    getStockList();
-  }, [stockCollectionRef]);
+    getStockList()
+  }, []);
+  
+  useEffect(() => {
+  stockList.map((stock => Tickers.push(stock.Ticker)))
+  console.log(Tickers);
+  }, []);
 
-
+  useEffect(() => {
+    
+    }, []);
+  
 
   return (
     
@@ -44,4 +56,3 @@ const Stock = () => {
       </table>
   );
 }
-export default Stock;

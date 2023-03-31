@@ -1,8 +1,7 @@
-const Funds = () => {
+export default function Funds() {
     return (
-      <main>
+      <div className="page">
         <h4>Funds</h4>
-      </main>
+      </div>
     );
-  };
-  export default Funds;
+  }

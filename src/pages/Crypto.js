@@ -1,8 +1,7 @@
-const Crypto = () => {
+export default function Crypto() {
     return (
-      <main>
+      <div className="page">
         <h4>Crypto</h4>
-      </main>
+      </div>
     );
-  };
-  export default Crypto;
+  }
